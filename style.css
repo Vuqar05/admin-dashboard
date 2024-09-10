@@ -67,6 +67,7 @@ body {
             display: inline;
             filter: invert(1);
             width: 1rem;
+
         }
     }
     .logo {
@@ -97,32 +98,168 @@ body {
         gap: .5rem;
 
         .header-line-1 {
-            background-color: #1992d4;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 .5rem;
+            align-items: center;
+            gap: 5rem;
 
-            display: grid;
-            grid-template-columns: 1fr 10fr 2fr 1fr 1.5fr 2fr;
+            .search-block, .user-block {
+                display: flex;
+                align-items: center;
+            }
 
+            .user-block {
+                justify-content: center;
+                gap: 10%;
+                font-size: .8rem;
+                flex-grow: 1;
+
+            }
+
+            .search-block {
+                gap: 2%;
+            }
 
             img {
                 display: inline;
-                width: 2rem;
+                width: 1rem;
             }
+
+
 
             .search-bar {
                 background-color: #e2e8f0;
-                height: 100%;
+                color: rgba(159, 168, 174, 0.56);
+
+                width: 30rem;
+                border-radius: 1rem;
+                padding: .1rem .1rem .1rem  .8rem;
             }
 
-            #bell {
-                grid-column: 4;
+            img.pfp {
+                width: 2rem;
+                height: 2rem;
             }
+
         }
 
         .header-line-2 {
-            background-color: crimson;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10%;
+
+            .user-part {
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 3rem;
+                grid-auto-flow: column;
+                align-items: center;
+                column-gap: .5rem;
+
+                img {
+                    width: 3rem;
+                    grid-row: span 2;
+
+                }
+                span#greeting {
+                    font-size: .5rem;
+                    align-self: end;
+                }
+
+                span#username {
+                    font-size: .7rem;
+                    align-self: start;
+                }
+            }
+
+
+
+            .buttons-part {
+                display: grid;
+                grid-auto-flow: column;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .button {
+                background-color: #1992d4;
+                color: white;
+                font-size: .5rem;
+                width: 3.5rem;
+                padding: .3rem 0;
+                border-radius: 1rem;
+                text-align: center;
+            }
+
+            #new-btn {
+                grid-column: 6;
+            }
+            #save-btn {
+                grid-column: 7;
+            }
+            #upload-btn {
+                grid-column: 8;
+
+            }
+        }
+        .pfp {
+            background-color: #faa500;
+            border-radius: 100%;
         }
     }
 
     main {
         background-color: #e2e8f0;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 7fr 3fr;
+        color: black;
+        padding: 1rem 2rem 3rem 2rem;
+
+        div.projects {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: start;
+            align-content: start;
+            gap: 1rem;
+
+            span {
+                grid-column: span 2;
+            }
+
+            div.project-box {
+                box-sizing: border-box;
+                background-color: white;
+                border-left: #faa500 .5rem solid;
+                padding: 1rem 1rem 1.5rem;
+                font-weight: normal;
+                font-size: .8rem;
+                border-radius: 5px;
+
+
+                span {
+                    font-weight: bold;
+                }
+
+                p {
+                    color: dimgray;
+                }
+
+
+                .project-buttons-container {
+                    padding-top: 2rem;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    gap: 1rem;
+
+
+                    img {
+                        width: 1.2rem;
+                    }
+
+
+                }
+            }
+        }
     }
