@@ -112,9 +112,13 @@ body {
 
             .user-block {
                 justify-content: flex-end;
-                gap: 1rem;
-                font-size: .8rem;
+                gap: .8rem;
+                font-size: 1rem;
                 flex-grow: 1;
+
+                #bell {
+                    width: 1rem;
+                }
 
             }
 
@@ -164,12 +168,12 @@ body {
 
                 }
                 span#greeting {
-                    font-size: .5rem;
+                    font-size: .8rem;
                     align-self: end;
                 }
 
                 span#username {
-                    font-size: .7rem;
+                    font-size: 1rem;
                     align-self: start;
                 }
             }
@@ -185,8 +189,8 @@ body {
             .button {
                 background-color: #1992d4;
                 color: white;
-                font-size: .5rem;
-                width: 3.5rem;
+                font-size: .8rem;
+                width: 5rem;
                 padding: .3rem 0;
                 border-radius: 1rem;
                 text-align: center;
