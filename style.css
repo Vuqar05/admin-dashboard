@@ -38,6 +38,7 @@ p, h1, h2, h3, h4, h5, h6 {
 body {
     height: 100vh;
     width: 100vw;
+    max-height: 100vh;
 
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -110,8 +111,8 @@ body {
             }
 
             .user-block {
-                justify-content: center;
-                gap: 10%;
+                justify-content: flex-end;
+                gap: 1rem;
                 font-size: .8rem;
                 flex-grow: 1;
 
@@ -214,7 +215,12 @@ body {
         display: grid;
         grid-template-columns: 7fr 3fr;
         color: black;
-        padding: 1rem 2rem 3rem 2rem;
+        padding: 1rem 2rem 1% 2rem;
+
+        .block-title {
+            font-weight: 500;
+            font-size: 1rem;
+        }
 
         div.projects {
             display: grid;
@@ -236,6 +242,7 @@ body {
                 font-size: .8rem;
                 border-radius: 5px;
 
+                box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.10);
 
                 span {
                     font-weight: bold;
@@ -262,4 +269,75 @@ body {
                 }
             }
         }
+
+        div.right-block {
+            margin-left: 1rem;
+            display: grid;
+            grid-auto-rows: max-content;
+            gap: 1rem;
+
+            .announcements, .trending {
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+
+            }
+
+            div.announcements {
+                font-size: .6rem;
+                padding: 1rem 1rem 1.5rem;
+                background-color: white;
+                border-radius: 5px;
+                display: grid;
+                gap: 1rem;
+                div.announcement {
+                    span {
+                        font-weight: bold;
+                    }
+
+                    p {
+                        color: dimgray;
+                        font-weight: normal;
+                    }
+                }
+
+                div.announcement + div.announcement {
+                    padding-top: .7rem;
+                    border-top: rgba(105, 105, 105, 0.3) solid 1px;
+                }
+            }
+
+            div.trending {
+                display: grid;
+                grid-template-columns: auto 1fr;
+                row-gap: 1rem;
+                column-gap: .5rem;
+                align-items: center;
+                align-content: center;
+                background-color: white;
+                padding: 4%;
+                border-radius: 4px;
+
+
+                div.trending-project {
+                    width: fit-content;
+                    height: fit-content;
+                    font-size: .7rem;
+
+                    .trending-project-name {
+                    }
+                    .trending-project-description {
+                        font-weight: normal;
+                        color: dimgray;
+                    }
+                }
+                img {
+                    width: 2.8rem;
+                    background-color: #53b3e8;
+                    border-radius: 100%;
+                }
+            }
+
+        }
     }
+
+
+
